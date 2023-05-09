@@ -19,7 +19,6 @@ public class ThrowBall : MonoBehaviour
     {
       Vector3 force = new Vector3(0, 0, BallSpedd*-1);
       rb.AddForce(force);
-      Debug.Log("ok");
     }
   }
 }
