@@ -20,5 +20,11 @@ public class ThrowBall : MonoBehaviour
       Vector3 force = new Vector3(0, 0, BallSpeed * -1);
       rb.AddForce(force, ForceMode.Impulse);
     }
+    if (Input.GetMouseButtonDown(1))
+    {
+      Vector3 defaultposition = new Vector3(0, 1.8f, 9.22f);
+      transform.position = defaultposition;
+      rb.velocity = new Vector3(0,0,0);
+    }
   }
 }
