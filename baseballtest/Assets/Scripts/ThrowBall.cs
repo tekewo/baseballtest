@@ -5,7 +5,7 @@ using UnityEngine;
 public class ThrowBall : MonoBehaviour
 {
   private Rigidbody rb;
-  public float BallSpedd;
+  public float BallSpeed;
   // Start is called before the first frame update
   void Start()
   {
@@ -17,8 +17,8 @@ public class ThrowBall : MonoBehaviour
   {
     if (Input.GetKeyDown(KeyCode.Space))
     {
-      Vector3 force = new Vector3(0, 0, BallSpedd*-1);
-      rb.AddForce(force);
+      Vector3 force = new Vector3(0, 0, BallSpeed * -1);
+      rb.AddForce(force, ForceMode.Impulse);
     }
   }
 }
